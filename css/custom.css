@@ -14,10 +14,25 @@ footer{
 	background-color: #f74c3c;
 	padding-bottom: 30px;
 	padding-top: 150px;
+	position: relative;
 }
 
 #get-involved{
 	background-color: #f5f5f5;
+}
+
+#back-to-top{
+	position: absolute;
+	bottom: 30px;
+	right: 25px;
+}
+
+#back-to-top a {
+	color: #333;
+}
+
+#back-to-top a:hover {
+	opacity: 0.8;
 }
 
 .jumbotron{
@@ -37,6 +52,10 @@ footer{
 	padding: 0px 50px;
 }
 
+.modal-content{
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
 
 .btn-lg:{
 	font-size: 36px;
