@@ -33,10 +33,10 @@ function RandomOpacity(){
 	return x;
 }
 
-function ColorBlocks(this) {
+function ColorBlocks(dom) {
 		newColor = 'rgba(' + (r ? RandomColor() : 0) + ',' + (g ? RandomColor() : 0) + ',' + (b ? RandomColor() : 0) + ',' + (opa ? RandomOpacity(): 1) +')';
-		this.style.backgroundColor= newColor;
-		this.className = "blocks flipped";
+		dom.style.backgroundColor= newColor;
+		dom.className = "blocks flipped";
 	}
 
 for (i = 1; i<1300; i++){
