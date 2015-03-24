@@ -14,11 +14,7 @@ function styleBlocks(i){
 	div.className = "blocks";
 	div.style.transformstlye = "preserve-3d";
 	div.style.transition = "transform 1s";
-	div.onmousedown = function() {
-		newColor = 'rgba(' + (r ? RandomColor() : 0) + ',' + (g ? RandomColor() : 0) + ',' + (b ? RandomColor() : 0) + ',' + (opa ? RandomOpacity(): 1) +')';
-		div.style.backgroundColor= newColor;
-		div.className = "blocks flipped";
-	}
+	div.onmousedown = "ColorBlocks(this)";
 	/*div.onmouseout = function() {
 		newColor = 'rgba(' + (r ? RandomColor() : 0) + ',' + (g ? RandomColor() : 0) + ',' + (b ? RandomColor() : 0) + ',' + (opa ? RandomOpacity(): 1) +')';
 		div.style.backgroundColor= newColor;
@@ -36,6 +32,12 @@ function RandomOpacity(){
 	var x= Math.random().toFixed(1);
 	return x;
 }
+
+function ColorBlocks(this) {
+		newColor = 'rgba(' + (r ? RandomColor() : 0) + ',' + (g ? RandomColor() : 0) + ',' + (b ? RandomColor() : 0) + ',' + (opa ? RandomOpacity(): 1) +')';
+		this.style.backgroundColor= newColor;
+		this.className = "blocks flipped";
+	}
 
 for (i = 1; i<1300; i++){
 	createBlocks();
