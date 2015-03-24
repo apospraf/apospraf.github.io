@@ -14,7 +14,7 @@ function styleBlocks(i){
 	div.className = "blocks";
 	div.style.transformstlye = "preserve-3d";
 	div.style.transition = "transform 1s";
-	div.onmouseover = function() {
+	div.onmousedown = function() {
 		newColor = 'rgba(' + (r ? RandomColor() : 0) + ',' + (g ? RandomColor() : 0) + ',' + (b ? RandomColor() : 0) + ',' + (opa ? RandomOpacity(): 1) +')';
 		div.style.backgroundColor= newColor;
 		div.className = "blocks flipped";
